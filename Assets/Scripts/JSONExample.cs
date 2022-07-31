@@ -15,17 +15,23 @@ public class JSONExample : MonoBehaviour
     public Text descritionPanel;
 
     //Data 2
+    public PropertiesList2 PropertiesList2 = new PropertiesList2();
 
+    public GameObject buttonAttach2;
+    public GameObject panel2;
+    public Text descritionPanel2;
 
     void Start()
     {
         Init();
         Reader();
+        Reader2();
     }
 
     void Init()
     {
         panel.SetActive(false);
+        panel2.SetActive(false);
     }
 
 
@@ -88,4 +94,63 @@ public class JSONExample : MonoBehaviour
         }
     }
 
+
+
+
+
+
+
+    void Reader2()
+    {
+        //Load JSON file
+        TextAsset asset = Resources.Load("File2") as TextAsset;
+
+
+        if (asset != null)
+        {
+            //Parse JSON to get properties
+            PropertiesList2 = JsonUtility.FromJson<PropertiesList2>(asset.text);
+
+
+            foreach (FileProperties2 fileProperties2 in PropertiesList2.FileProperties2)
+            {
+                CreateButton2(fileProperties2.id, fileProperties2.title, fileProperties2.content);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No files!");
+        }
+    }
+
+    void CreateButton2(int buttonId, string buttonName, string description)
+    {
+        //Instanciate Button
+        GameObject button = (GameObject)Instantiate(buttonPrefab);
+        //Change button name
+        button.name = $"ButtonV2 {buttonId}";
+        //Place it in the canvas
+        button.transform.SetParent(buttonAttach2.transform);
+        //Change button name
+        button.transform.GetChild(0).GetComponent<Text>().text = buttonName;
+
+
+        //What button does when clicked
+        button.GetComponent<Button>().onClick.AddListener(() => { OnClick2(description); });
+    }
+
+    void OnClick2(string description)
+    {
+        //Select description depending on which button is pressed 
+        descritionPanel2.text = description.ToString();
+    }
+
+    public void OnClickFile2()
+    {
+        //Activate File menu
+        if (!buttonAttach.activeInHierarchy)
+        {
+            panel2.SetActive(true);
+        }
+    }
 }

@@ -380,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &264092792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -671,6 +671,11 @@ MonoBehaviour:
   buttonAttach: {fileID: 880201906}
   panel: {fileID: 264092791}
   descritionPanel: {fileID: 1059906336}
+  PropertiesList2:
+    FileProperties2: []
+  buttonAttach2: {fileID: 1711632663}
+  panel2: {fileID: 1540318383}
+  descritionPanel2: {fileID: 2065179717}
 --- !u!4 &462050920
 Transform:
   m_ObjectHideFlags: 0
@@ -698,7 +703,7 @@ GameObject:
   - component: {fileID: 510455217}
   - component: {fileID: 510455216}
   m_Layer: 5
-  m_Name: CloseTab
+  m_Name: CloseTab2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1756,7 +1761,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 462050919}
         m_TargetAssemblyTypeName: JSONExample, Assembly-CSharp
-        m_MethodName: OnClickFile
+        m_MethodName: OnClickFile2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1824,7 +1829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1540318384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1951,7 +1956,7 @@ GameObject:
   - component: {fileID: 1711632664}
   - component: {fileID: 1711632665}
   m_Layer: 5
-  m_Name: ButtonsContainer
+  m_Name: ButtonsContainer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
