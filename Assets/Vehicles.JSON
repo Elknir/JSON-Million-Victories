@@ -1,0 +1,20 @@
+{
+	"Vehicles":
+	[
+		{
+			"Make": "Toyota",
+			"Model": "Camry",
+			"Wheels": 4
+		},
+		{
+			"Make": "Yamaha",
+			"Model": "YZF-R1S",
+			"Wheels": 2
+		},
+		{
+			"Make": "Ford",
+			"Model": "Ranger",
+			"Wheels": 4
+		}
+	]
+}
