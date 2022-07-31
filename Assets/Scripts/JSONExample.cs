@@ -4,21 +4,30 @@ using UnityEngine.UI;
 
 public class JSONExample : MonoBehaviour
 {
-    public PropertiesList PropertiesList = new PropertiesList();
 
     public GameObject buttonPrefab;
-    public GameObject buttonAttach;
 
+    //Data 1
+    public PropertiesList PropertiesList = new PropertiesList();
+
+    public GameObject buttonAttach;
     public GameObject panel;
     public Text descritionPanel;
 
-
+    //Data 2
 
 
     void Start()
     {
+        Init();
         Reader();
     }
+
+    void Init()
+    {
+        panel.SetActive(false);
+    }
+
 
     void Reader()
     {
